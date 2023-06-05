@@ -1,0 +1,23 @@
+import paho.mqtt.client as mqtt
+import serial
+
+# Create a MQTT client object
+client = mqtt.Client("RaspberryPiPublisher")
+
+# Connect to the MQTT broker
+broker_address = "your_mqtt_broker_address"
+broker_port = 1883  # default MQTT port, change if your broker uses a different port
+client.connect(broker_address, broker_port)
+
+# Connect to the serial port
+ser = serial.Serial('/dev/ttyACM0', 9600)  # adjust the parameters as necessary
+
+# Define the topic where you'll be publishing your messages
+topic = "lidar/data"
+
+while True:
+    # Read data from the serial port
+    reading = ser.readline().decode()
+
+    # Publish the data as a MQTT message
+    client.publish(topic, reading)
