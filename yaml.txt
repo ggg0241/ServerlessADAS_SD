@@ -1,0 +1,13 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://localhost:8080
+
+functions:
+  subscriber:
+    lang: python3
+    handler: ./subscriber
+    image: your-docker-hub-username/subscriber:latest
+    environment:
+      BROKER_ADDRESS: "localhost"
+      TOPIC: "lidar/data"
