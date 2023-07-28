@@ -1,4 +1,0 @@
-﻿  main.cpp
-C:\Users\gabeg\source\repos\LiDARObjectDetection\LiDARObjectDetection\main.cpp(96,22): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\gabeg\source\repos\LiDARObjectDetection\LiDARObjectDetection\main.cpp(191,31): warning C4018: '<': signed/unsigned mismatch
-  LiDARObjectDetection.vcxproj -> C:\Users\gabeg\source\repos\LiDARObjectDetection\x64\Debug\LiDARObjectDetection.exe
