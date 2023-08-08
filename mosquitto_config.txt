@@ -1,4 +1,4 @@
-#place your local configuration file in /etc/mosquitto/conf.d/
+# place your local configuration file in /etc/mosquitto/conf.d/
 #
 # A full description of the configuration file is at
 # /usr/share/doc/mosquitto/examples/mosquitto.conf.example
@@ -13,8 +13,7 @@ log_type all
 
 # include_dir /etc/mosquitto/conf.d
 
-listener 1883 
-
+listener 1883 0.0.0.0
 allow_anonymous true
 
 # password_file /etc/mosquitto/passwords.txt
