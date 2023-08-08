@@ -3,7 +3,7 @@ import paho.mqtt.client as mqtt
 
 TOPIC = 'controller'
 PORT = 1883
-BROKER = "127.0.0.1"
+BROKER = "172.17.0.1" #mosquitto broker IP
 
 def handle(event):
     message = event.decode()
