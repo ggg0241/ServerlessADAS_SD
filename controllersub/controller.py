@@ -13,7 +13,7 @@ def on_message(client, userdata, message):
     payload = message.payload.decode("utf-8")
 
     print(f"Received message: {payload} on topic: {topic}")
-
+    # can make other functions or implementations depending on what the payload sends
     # Check the received message and call corresponding functions
     if payload == "stop":
         fc.turn_right(25)
@@ -22,16 +22,6 @@ def on_message(client, userdata, message):
         fc.forward(50)
         end_time = time.time()
         print(end_time-start_time)
-    #elif payload == 35:
-    #    fc.forward(35)
-    #elif payload == 25:
-    #    fc.forward(25)
-    #elif payload == 15:
-    #    fc.forward(15)
-    #else:
-    #    fc.forward(50)
-
-# Functions to be invoked based on the received messagon 3 invoked!")
 
 def main():
     # Create a MQTT client
